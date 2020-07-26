@@ -5,24 +5,23 @@ const removeAccent = require("../util/removeAccent");
 const productSchema = new Schema({
   name: {
     type: String,
-    required: true
+    //required: true
   },
   description: {
     type: String,
-    required: false,
-    default: "Một sản phẩm từ Bros"
+//    required: false,
   },
   stock: {
     type: Number,
-    required: true
+    //required: true
   },
   price: {
     type: Number,
-    required: true
+    //required: true
   },
   size: {
     type: [String],
-    required: true
+    //required: true
   },
   productType: {
     main: String,
@@ -30,23 +29,23 @@ const productSchema = new Schema({
   },
   color: {
     type: [String],
-    required: true
+    //required: true
   },
   pattern: {
     type: [String],
-    required: false
+//    required: false
   },
   tags: {
     type: [String],
-    required: false
+//    required: false
   },
   images: {
-    type: [String],
-    required: true
+    type: [Array],
+    //required: true
   },
   dateAdded: {
     type: Date,
-    required: false,
+//    required: false,
     default: Date.now
   },
   isSale: {
@@ -65,28 +64,27 @@ const productSchema = new Schema({
   ofSellers: {
     userId: {
       type: Schema.Types.ObjectId,
-      required: true,
+//      required: true,
       ref: "User"
     },
     name: String
   },
   labels: {
     type: String,
-    required: false,
-    default: "Shiro"
+//    required: false,
   },
   materials: {
     type: [String],
-    required: true
+    //required: true
   },
   buyCounts: {
     type: Number,
-    required: false,
+//    required: false,
     default: 0
   },
   viewCounts: {
     type: Number,
-    required: false,
+//    required: false,
     default: 0
   },
   rating: {
@@ -96,7 +94,7 @@ const productSchema = new Schema({
   },
   index: {
     type: Number,
-    required: false,
+//    required: false,
     default: 0
   },
   comment: {
@@ -127,16 +125,6 @@ const productSchema = new Schema({
     ]
   }
 });
-
-const index = {
-  name: "text",
-  description: "text",
-  labels: "text",
-  "productType.main": "text",
-  tags: "text",
-  ofSellers: "text"
-};
-productSchema.index(index);
 
 productSchema.methods.getNonAccentType = function() {
   return removeAccent(this.productType.main);

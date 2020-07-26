@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <% include partials/head %>
+    <body>
+    <header>
+        <% include partials/header %>
+    </header>
+        <div class="container du-lieu">      
+            <div class="jumbotron text-center">
+                <h1 class="display-3">Thêm dữ liệu</h1>
+            </div>
+            <form id="upload-widget" method="post"  action="/upimage" class="dropzone"></form>
+            <form method="post" action="/addProduct">
+            <div class="form-group">
+                <label for="name">Title</label>
+                <input type="text" class="form-control" name="name" placeholder="Tên sản phẩm">
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <input type="text" class="form-control" name="description" placeholder="Chi tiết">
+            </div>
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input type="number" class="form-control" name="price" placeholder="Giá">
+            </div>
+            <div class="form-group">
+                <label for="stock">Stock</label>
+                <input type="number" class="form-control" name="stock" placeholder="Số lượng sản phẩm">
+            </div>
+            <div class="form-group">
+                <label for="size">Size</label>
+                <input type="text" class="form-control" name="size" placeholder="Size available">
+            </div>
+
+            <button style="width: 25%;" type="submit" class="btn btn-secondary pt-2 pb-2">Submit</button>
+        </form>  
+        </div>
+<footer>
+	<% include partials/footer %>
+</footer>
+    <% include partials/modal-addtocartproduct %>
+    <% include partials/modal-quickviewmodal %>
+    <% include partials/modal-videoproduct %>
+    <% include partials/modal-subscribegood %>
+    <% include partials/script %>
+</body>
+</html>

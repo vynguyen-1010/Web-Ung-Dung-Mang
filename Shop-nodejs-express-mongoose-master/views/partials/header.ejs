@@ -2,24 +2,24 @@
 	<nav class="panel-menu mobile-main-menu">
 		<ul>
 			<li>
-				<a href="/">Trang chủ</a>
+				<a href="/">Home</a>
 				<ul>
 					<li>
-						<a href="/">HOME STYLES</a>
+						<a href="/">New Arrival</a>
 						
 					</li>
 					<li>
-						<a href="/">HOME STYLES</a>
+						<a href="/">On Sale</a>
 						
 					</li>
 					<li>
-						<a href="/">HOME SKINS <span class="tt-badge tt-sale">HOT</span></a>
+						<a href="/">Best Seller <span class="tt-badge tt-sale">HOT</span></a>
 						
 					</li>
 				</ul>
 			</li>
 			<li>
-				<a href="/products">Cửa hàng</a>
+				<a href="/products">Collection</a>
 				
 			</li>
 			
@@ -82,7 +82,7 @@
 										
 									</li>
 									<li class="dropdown megamenu">
-										<a href="/products">Shop Collections</a>
+										<a href="/products">Collection</a>
 									</li>
 									
 								</ul>
@@ -102,7 +102,7 @@
 								<div class="container">
 									<form method="GET" action="/search">
 										<div class="tt-col">
-											<input type="text" class="tt-search-input" placeholder="Tìm Kiếm Sản Phẩm..." name="searchText">
+											<input type="text" class="tt-search-input" placeholder="Searching . . ." name="searchText">
 											
 											<button class="tt-btn-search" type="submit"></button>
 										
@@ -111,7 +111,7 @@
 											<button class="tt-btn-close icon-g-80"></button>
 										</div>
 										<div class="tt-info-text">
-											Bạn đang tìm kiếm gì?
+											What are you looking for?
 										</div>
 									</form>
 								</div>
@@ -128,21 +128,16 @@
 							</button>
 							<div class="tt-dropdown-menu">
 								<div class="tt-mobile-add">
-									<h6 class="tt-title">Giỏ hàng</h6>
-									<button class="tt-close">Đóng</button>
+									<h6 class="tt-title">Shopping Cart</h6>
+									<button class="tt-close">X</button>
 								</div>
 								<div class="tt-dropdown-inner">
 									<div class="tt-cart-layout">
-										<!-- layout emty cart -->
-										<!-- <a href="/empty-cart.html" class="tt-cart-empty">
-											<i class="icon-f-39"></i>
-											<p>No Products in the Cart</p>
-										</a> -->
 										<div class="tt-cart-content" >
 											
 											<div class="tt-cart-list">
 												<% if(session.cart.numItems == 0){ %>
-													<div class="tt-item">Không có sản phẩm trong giỏ</div>
+													<div class="tt-item">Empty</div>
 													<% } %>
 												<% if(cartProduct != null){
 													var i = 0;
@@ -152,20 +147,16 @@
 													}
 													%>
 												<div class="tt-item">
-													
-													
 													<a href="/product/<%= item.item._id %>">
 														<div class="tt-item-img">
-															<img src="http://bros-admin.herokuapp.com/assets/images/<%= item.images %>" data-src="http://bros-admin.herokuapp.com/assets/images/<%= item.images %>" alt="">
+															<img src="<%= item.images %>" data-src="<%= item.images %>" alt="">
 														</div>
 														<div class="tt-item-descriptions">
 															<h2 class="tt-title"><%= item.item.name %></h2>
 															
 															<div class="tt-quantity"><%= item.qty %> X</div> <div class="tt-price">$<%= item.item.price %></div>
 														</div>
-													</a>
-													
-													
+													</a>	
 												</div>
 												<% i++;})
 												if(session.cart.numItems > 3){
@@ -175,26 +166,26 @@
 												
 											</div>
 											<div class="tt-cart-total-row">
-												<div class="tt-cart-total-title">Tổng tiền:</div>
+												<div class="tt-cart-total-title">TOTAL:</div>
 												<div class="tt-cart-total-price">$<%= session.cart.totalPrice %></div>
 											</div>
 											<div class="tt-cart-btn">
 												<% if(session.cart.numItems != 0){ %>
 													<div class="tt-item">
 													<%if (typeof(user) !== 'undefined' && user.isAuthenticated) { %>
-													<a href="/add-order" class="btn">Chuyển đến thanh toán</a>
+													<a href="/add-order" class="btn">Checkout!</a>
 													<% }else if(typeof(user) == 'undefined'){ %>
-														<a href="/login" class="btn">Đăng nhập để thanh toán</a>
+														<a href="/login" class="btn">Login to checkout!</a>
 														
 														<% }else if(typeof(user) !== 'undefined' && !user.isAuthenticated){ %>
-															<a href="/verify-email" class="btn">Kích hoạt email để thanh toán</a>
+															<a href="/verify-email" class="btn">Vertify your email!</a>
 															<% } %>
 												</div>
 													<% } %>
 												
 												<div class="tt-item">
-													<a href="/shopping_cart" class="btn-link-02 tt-hidden-mobile">Xem giỏ hàng</a>
-													<a href="/shopping_cart" class="btn btn-border tt-hidden-desctope">Xem giỏ hàng</a>
+													<a href="/shopping_cart" class="btn-link-02 tt-hidden-mobile">View Cart</a>
+													<a href="/shopping_cart" class="btn btn-border tt-hidden-desctope">View Cart</a>
 												</div>
 											</div>
 										</div>
@@ -207,7 +198,7 @@
 					<!-- tt-account -->
 					<div class="tt-desctop-parent-account tt-parent-box">
 						<div class="tt-account tt-dropdown-obj">
-							<button class="tt-dropdown-toggle"  data-tooltip="Tài khoản của tôi" data-tposition="bottom"><i class="icon-f-94"></i></button>
+							<button class="tt-dropdown-toggle"  data-tooltip="My Account" data-tposition="bottom"><i class="icon-f-94"></i></button>
 							<div class="tt-dropdown-menu">
 								<div class="tt-mobile-add">
 									<button class="tt-close">Close</button>
@@ -215,25 +206,25 @@
 								<div class="tt-dropdown-inner">
 									<ul>
 											<%if (typeof(user) !== 'undefined') { %>
-												<li>Xin chào, <%= user.username %></a></li>
-												<li><a href="/account"><i class="icon-f-94"></i>Tài khoản</a></li>
+												<li>Hi, <%= user.username %></a></li>
+												<li><a href="/account"><i class="icon-f-94"></i>Your Account</a></li>
 												<% if(user.isAuthenticated) {%>
-												<li><a href="/shopping_cart"><i class="icon-f-68"></i>Thanh toán</a></li>
+												<li><a href="/shopping_cart"><i class="icon-f-68"></i>Checkout</a></li>
 												<% } %>
 												<% if(!user.isAuthenticated) {%>
-													<li><a href="/verify-email"><i class="icon-f-68"></i>Xác thực email</a></li>
+													<li><a href="/verify-email"><i class="icon-f-68"></i>Vertify Email</a></li>
 												<% }} %>
 									    
 										
 										
 										<%if (typeof(user) !== 'undefined') { %>
-											<li><a href="/logout"><i class="icon-f-77"></i>Đăng xuất</a></li>
+											<li><a href="/logout"><i class="icon-f-77"></i>Logout</a></li>
 											<% } %>
 
 											<%if (typeof(user) === 'undefined') { %>
-												<li><a href="/login"><i class="icon-f-76"></i>Đăng nhập</a></li>
+												<li><a href="/login"><i class="icon-f-76"></i>Login</a></li>
 									    
-									    <li><a href="/create-account"><i class="icon-f-94"></i>Đăng ký</a></li>
+									    <li><a href="/create-account"><i class="icon-f-94"></i>Signup</a></li>
 												<% } %>
 									    
 									</ul>
@@ -242,28 +233,7 @@
 						</div>
 					</div>
 					<!-- /tt-account -->
-					<!-- tt-langue and tt-currency -->
-					<div class="tt-desctop-parent-multi tt-parent-box">
-						<div class="tt-multi-obj tt-dropdown-obj">
-							<button class="tt-dropdown-toggle" data-tooltip="Cài đặt" data-tposition="bottom"><i class="icon-f-79"></i></button>
-							<div class="tt-dropdown-menu">
-								<div class="tt-mobile-add">
-									<button class="tt-close">Đóng</button>
-								</div>
-								<div class="tt-dropdown-inner">
-									<ul>
-										<li class="active"><a href="/#">Tiếng Việt</a></li>
-										
-									</ul>
-									<ul>
-										<li class="active"><a href="/#"><i class="icon-h-59"></i>VND - Việt Nam Đồng</a></li>
-										<li><a href="/#"><i class="icon-h-60"></i>USD - Dollar</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- /tt-langue and tt-currency -->
+					
 				</div>
 			</div>
 		</div>

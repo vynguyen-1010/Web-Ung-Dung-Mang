@@ -2,9 +2,9 @@
   font-family: 'wokiee';
   src:  url('fonts/wokiee.eot?rfqclb');
   src:  url('fonts/wokiee.eot?rfqclb#iefix') format('embedded-opentype'),
-    url('fonts/wokiee.ttf?rfqclb') format('truetype'),
-    url('fonts/wokiee.woff?rfqclb') format('woff'),
-    url('fonts/wokiee.svg?rfqclb#wokiee') format('svg');
+        url('fonts/wokiee.ttf?rfqclb') format('truetype'),
+        url('fonts/wokiee.woff?rfqclb') format('woff'),
+        url('fonts/wokiee.svg?rfqclb#wokiee') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -12,7 +12,6 @@
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'wokiee' !important;
-  speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;

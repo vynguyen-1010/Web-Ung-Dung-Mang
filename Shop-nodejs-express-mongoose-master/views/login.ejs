@@ -4,43 +4,39 @@
     <% include partials/head %>
   </head>
   <body>
-    <% include partials/loader %>
     <header>
-      <% include partials/header %>
+    <% include partials/header %>
     </header>
     <div class="tt-breadcrumb">
       <div class="container">
         <ul>
           <li><a href="/">Home</a></li>
-          <li>Đăng nhập</li>
+          <li>Login</li>
         </ul>
       </div>
     </div>
     <div id="tt-pageContent">
       <div class="container-indent">
         <div class="container">
-          <h1 class="tt-title-subpages noborder">Đã đăng ký?</h1>
+          <h1 class="tt-title-subpages noborder">Already SignUp?</h1>
           <div class="tt-login-form">
             <div class="row">
               <div class="col-xs-12 col-md-6">
                 <div class="tt-item">
-                  <h2 class="tt-title">KHÁCH HÀNG MỚI</h2>
+                  <h2 class="tt-title">NEW TO HAPPYKIDS</h2>
                   <p>
-                    Bằng cách tạo tài khoản với cửa hàng của chúng tôi, bạn sẽ
-                    có thể chuyển qua quy trình thanh toán nhanh hơn, lưu trữ
-                    nhiều địa chỉ giao hàng, xem và theo dõi đơn hàng của bạn
-                    trong tài khoản của bạn và hơn thế nữa.
+                    By creating an account with our store, you will be able to move through the payment process faster, store multiple shipping addresses, view and track your orders in your account and more ...
                   </p>
                   <div class="form-group">
                     <a href="/create-account" class="btn btn-top btn-border"
-                      >TẠO TÀI KHOẢN</a
+                      >SIGN UP NOW!</a
                     >
                   </div>
                 </div>
               </div>
               <div class="col-xs-12 col-md-6">
                 <div class="tt-item">
-                  <h2 class="tt-title">Đăng nhập</h2>
+                  <h2 class="tt-title">Login</h2>
 
                   <div class="form-default form-top">
                     <form
@@ -59,31 +55,31 @@
                       <% } %>
 
                       <div class="form-group">
-                        <label for="username">Tên đăng nhập *</label>
-                        <div class="tt-required">* Bắt buộc</div>
+                        <label for="username">Username *</label>
+                        <div class="tt-required">* Require</div>
                         <input
                           type="text"
                           name="username"
                           class="form-control"
                           id="username"
-                          placeholder="Điền tên đăng nhập"
+                          placeholder="Username"
                         />
                       </div>
                       <div class="form-group">
-                        <label for="password">Mật khẩu *</label>
+                        <label for="password">Password *</label>
                         <input
                           type="password"
                           name="password"
                           class="form-control"
                           id="password"
-                          placeholder="Điền mật khẩu"
+                          placeholder="Password"
                         />
                       </div>
                       <div class="row">
                         <div class="col-auto mr-auto">
                           <div class="form-group">
                             <button class="btn btn-border" type="submit">
-                              Đăng nhập
+                              Login
                             </button>
                           </div>
                         </div>
@@ -91,7 +87,7 @@
                           <div class="form-group">
                             <ul class="additional-links">
                               <li>
-                                <a href="/forgot-password">Quên mật khẩu?</a>
+                                <a href="/forgot-password">Forget Password?</a>
                               </li>
                             </ul>
                           </div>
@@ -111,9 +107,11 @@
     </footer>
     <a href="#" class="tt-back-to-top">BACK TO TOP</a>
     <!-- Partials -->
-    <% include partials/modal-addtocartproduct %> <% include
-    partials/modal-quickviewmodal %> <% include partials/modal-videoproduct %>
-    <% include partials/modal-subscribegood %> <% include
-    partials/modal-newsletter %> <% include partials/script %>
+    <% include partials/modal-addtocartproduct %> 
+    <% include partials/modal-quickviewmodal %> 
+    <% include partials/modal-videoproduct %>
+    <% include partials/modal-subscribegood %> 
+    <% include partials/modal-newsletter %> 
+    <% include partials/script %>
   </body>
 </html>

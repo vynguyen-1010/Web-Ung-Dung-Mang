@@ -1,158 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Hind:300,400,500,600");
-/* font */
-/* font icon*/
-/* Colors */
-/*
-	loader
-*/
-/*
-	Back to top
-*/
-/*
-	Breadcrumb
-*/
-/*
-	Form
-*/
-/*
-	typography
-*/
-/* button */
-/* list */
-/*
-	boxed layout
-*/
-/*
-	header
-*/
-/*logo if text*/
-/*account, language, currency*/
-/*account layout*/
-/*language and currency layout*/
-/*cart layout*/
-/*search layout*/
-/*desctope menu */
-/*
-	Footer
-*/
-/*
-	Product item
-*/
-/*
-	Product listing product
-*/
-/*Filters options*/
-/*
-	rating
-*/
-/*
-	label
-*/
-/*
-	Product single
-*/
-/* Collapse block */
-/* Review-block */
-/* produc slider vertical (product.html)*/
-/* produc slider vertical (product-02.html)*/
-/* video link*/
-/*
-	Blog
-*/
-/*
-Instagram
-*/
-/*
-Lookbook
-*/
-/*
-Modal
-*/
-/*addtocart*/
-/*newsletter*/
-/*layout product info (product-variable.html)*/
-/*subsribe_good*/
-/*
-Portfolio
-*/
-/*
-	magnific popup (portfolio pages)
-*/
-/*
-Promo
-*/
-/*promo full width (index-09.html)*/
-/*promo full width (index-13.html)*/
-/*collection img (index-02.html)*/
-/* promo fixed */
-/*
-	Shop cart
-*/
-/* shopping_cart_01.html */
-/* shopping_cart_02.html */
-/*
-	Shop account
-*/
-/* account_address.html, account.html, account_order.html */
-/*
-	slider revolution(index pages)
-*/
-/*
-	slider main slick(index-14.html)
-*/
-/*
-	slider slider
-*/
-/*
-	tooltip
-*/
-/*---------------------------------------*/
-/*--------   Table of contents   --------*/
-/*
-1. External module
-	1.1 Bootstrap
-	1.2 Bootstrap datepicker
-	1.3 Slider Slick
-	1.4 Magnific popup
-	1.5 Perfect scrollbar
-	1.6 Slider Revolution
-2. Fonts icons
-3. Header
-4. Footer
-5. Blog pages
-6. Portfolio pages
-7. Product single pages
-8. Modal
-9. Listing product
-10. Product item
-11. Promo box
-12. Promo box fixed
-13. Shopping Cart pages
-14. Lookbook module
-15. Slider Revolution
-16. Slider Slick
-17. Extend module
-18. Loader module
-19. Boxed module
-20. Instafeed module
-21. The same product height
-22. Tooltip
-23. Wishlist page
-24. Compare page
-25. Menu categories
-26. Typography
----------------------------------------*/
-/*---------------------------------------*/
-/*--------   1. External module  --------*/
-/*---------------------------------------*/
-/*-------  1.1 Bootstrap  --------*/
-/*!
- * Bootstrap v4.0.0 (https://getbootstrap.com)
- * Copyright 2011-2018 The Bootstrap Authors
- * Copyright 2011-2018 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
+
 *,
 *::before,
 *::after {
@@ -12825,7 +12673,7 @@ html.ie .tt-header-holder .tt-desctop-menu.tt-menu-small {
     * footer mobile begin < 789px
 */
 footer {
-  margin-top: 60px;
+  margin-top: 30px;
   /*
         Color schemes desctope
     */ }
@@ -12843,7 +12691,7 @@ footer {
     position: relative;
     top: 5px;
     font-family: "Hind", sans-serif;
-    color: #2879fe;
+    color: #1c2535;
     font-weight: 500;
     -moz-transition: color 0.2s linear;
     -o-transition: color 0.2s linear;
@@ -28508,7 +28356,7 @@ body:not(.touch-device) .arrow-location-center-02.tt-arrow-hover:hover .slick-ar
 
 /* tt-breadcrumb */
 .tt-breadcrumb {
-  background: #f7f8fa; }
+  background: #ffffff; }
   .tt-breadcrumb ul {
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -28529,7 +28377,7 @@ body:not(.touch-device) .arrow-location-center-02.tt-arrow-hover:hover .slick-ar
     -ms-flex-align: center;
     align-items: center; }
     .tt-breadcrumb ul li {
-      font-size: 12px;
+      font-size: 15px;
       padding: 4px 6px 4px 11px;
       position: relative;
       color: #777777; }
@@ -29396,7 +29244,7 @@ html:not(.mac):not(.touch-device) .tt-carousel-brands .slick-track {
 }
 
 .containerStar {
-  //background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/concrete-texture.png");
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/concrete-texture.png");
   display: flex;
   flex-wrap: wrap;
   height: 35vh;

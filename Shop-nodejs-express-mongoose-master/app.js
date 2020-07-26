@@ -19,12 +19,12 @@ const compression = require('compression');
 app.use(compression());
 mongoose.set('useCreateIndex', true);
 
-const urlConnect = process.env.DB;
+//const urlConnect = process.env.DB;
 
 // Connect to database
-mongoose.connect(urlConnect, { useNewUrlParser: true, useUnifiedTopology: true }, err => {
+mongoose.connect('mongodb://localhost:27017/Test', { useNewUrlParser: true, useUnifiedTopology: true }, err => {
   if (err) throw err;
-  console.log('Connect successfullyy!!');
+  console.log('Connect successfullyy! http://localhost:3000/');
 });
 
 // view engine setup
@@ -34,6 +34,11 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
+//app.use('/', shop);
+app.use('/uploads', express.static('uploads'));
+app.use('/product', productRouter);
+var productRouter = require('./routes/product');
+//app.use('/users', users);
 app.use(cookieParser());
 app.use(flash());
 app.use(
@@ -41,8 +46,6 @@ app.use(
     secret: 'notsecret',
     saveUninitialized: true,
     resave: false,
-    store: new MongoDBStore({ uri: process.env.DB, collection: 'sessions' }),
-    cookie: { maxAge: 180 * 60 * 1000 }
   })
 );
 

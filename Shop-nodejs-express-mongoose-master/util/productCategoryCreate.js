@@ -10,7 +10,7 @@ mongoose.connect(urlConnect, { useNewUrlParser: true }, err => {
 
   var abc = new ProductCategory({
     name: "Quần",
-    childName: ["Quần Dài", "Quần Ngắn", "Quần Thể Thao", "Quần Xì"]
+    childName: ["Quần Dài", "Quần Ngắn", "Quần Thể Thao"]
   });
 
   abc.save(function(err) {
